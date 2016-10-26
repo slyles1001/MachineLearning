@@ -22,15 +22,12 @@ for iter = 1:num_iters
 
 
 
+    J_history(iter) = computeCost(X, y, theta);
 
+    %J_history(iter), iter
+    thetaChange =  (alpha/m) * sum((sum((theta' .* X),2) - y).*X)';
+    theta = theta - thetaChange;
 
-
-
-
-    % ============================================================
-
-    % Save the cost J in every iteration    
-    J_history(iter) = computeCostMulti(X, y, theta);
 
 end
 

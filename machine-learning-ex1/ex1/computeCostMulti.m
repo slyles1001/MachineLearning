@@ -14,11 +14,7 @@ J = 0;
 %               You should set J to the cost.
 
 
-    J_history(iter) = computeCost(X, y, theta);
-
-    thetaChange =  (alpha/m) * sum((sum((theta' .* X),2) - y).*X)';
-
-    theta = theta - thetaChange;
+J =  (0.5/m) * sum((sum((theta' .* X),2) - y ).^2);
 
 
 
