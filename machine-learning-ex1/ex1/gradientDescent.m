@@ -26,8 +26,6 @@ for iter = 1:num_iters
     J_history(iter) = computeCost(X, y, theta);
     %J_history(iter), iter
     thetaChange =  (alpha/m) * sum((sum((theta' .* X),2) - y).*X)';
-    %t1 = theta(1) - (alpha * partialCost(X, y, theta, 1));
-    %t2 = theta(2) - (alpha * partialCost(X, y, theta, 2));
     theta = theta - thetaChange;
 
 end
